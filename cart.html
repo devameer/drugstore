@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Shooping Cart</title>
+		<link href="css/normalize.css" rel="stylesheet"> 
+		<link href="css/font-awesome.css" rel="stylesheet"> 
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+		<link href="css/bootstrapValidator.min.css" rel="stylesheet">
+		<link href="css/animation.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link href="css/drugs.css" rel="stylesheet">
+	</head>
+	<body>
+       <div class="container-fluid">
+
+       <!-- Search -->
+
+	       	<div class="row info-menu text-center">
+                <div class="container">
+                     <div class="col-sm-2 col-xs-3  logo-hide text-left">
+                        <img src="images/logo.png">
+                </div>
+            <div class="col-sm-6  col-sm-offset-1 col-xs-6 col-sx-offset-1 search">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control input-box" placeholder="إبحث هنا ..." >
+                    <span class="input-group-addon no-border-bg">
+                    <i class="glyphicon glyphicon-search"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-6 text-right icon-hide">
+            	<a href="#"><i class="glyphicon glyphicon-user"></i></a>
+            	<a href="#" data-toggle="modal" data-target="#myModal">
+            	<i class="glyphicon glyphicon-log-in"></i></a>
+            	<i></i>
+            </div>
+
+            <div class="col-sm-2 col-sm-offset-1 col-xs-3 left info-hide text-right">
+                <div class="row">
+                    <p class="phone">
+                        <i class="glyphicon glyphicon-phone-alt"></i>&emsp;010 4567 890
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="email">
+                        <i class="glyphicon glyphicon-envelope">&emsp;</i>g@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Search -->
+
+
+        
+
+        <!-- Main Menu -->
+	    <div class="row">
+	       	 <div class="main-menu">
+	       		<div class="container">
+	       		<div class="col-sm-8 col-xs-6">
+	       			<ul class="r-menu">
+	       				<li><a href="home.html">االرئيسية</a></li>
+	       				<li><a href="blogs.html">المدونة</a></li>
+	       				<li><a href="#">آراء العملاء</a></li>
+	       				<li><a href="#">من نحن</a></li>
+	       				<li><a href="blogs.html">خدامتنا</a></li>
+	       				<li><a href="contact.html">اتصل بنا</a></li>
+	       			</ul>
+	       			<button class="btn hamburger-btn"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+	       		</div>
+	       		<div class="col-sm-2 col-xs-3  border-l border-r">
+
+	       		<ul class="l-menu">
+	       				<li><a href="#">حسابي<i class="fa fa-angle-down"></i></a>
+	       				<div class="row">
+	       				<div class="col-md-12 col-xs-12">
+                         <ul class="sub-menu text-left">
+                         	<li><a href="register.html">حساب جديد</a></li>
+	       				    <li><a href="#" data-toggle="modal" data-target="#myModal">تسجيل دخول</a></li>
+                         </ul>
+                         </div>
+                         </div>
+	       				</li>
+	       				
+	       			</ul>
+	       			
+	       		</div>
+	       		<div class="col-sm-2 col-xs-3 border-l">
+	       		<div class="row">
+	       			<a class="cart text-center" href="cart.html">
+	       				<span class="num-products">0 <i class="glyphicon glyphicon-shopping-cart"></i> - 0.0 &dollar; </span>
+	       			</a>
+	       		</div>
+	       		</div>
+	       		</div>
+	       	</div>
+	    </div>
+
+	    <!-- Responcive Menu -->
+
+        <div class="row">
+	          	<div class="second-menu">
+		       		<div class="col-xs-12 text-center full-width-col">
+	                  <div class="container">
+		       		    <ul class="mobile-menu text-center">
+		       				<li><a href="home.html">الرئيسية</a></li>
+		       				<li><a href="blogs.html">المدونة</a></li>
+		       				<li><a href="#">آراء العملاء</a></li>
+		       				<li><a href="#">من نحن</a></li>
+		       				<li><a href="#">خدامتنا</a></li>
+		       				<li><a href="contact.html">اتصل بنا</a></li>
+		       			 <!-- <ul class="operation-menu text-right">
+		       			<li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
+		       			<li><a href="#"><i class="glyphicon glyphicon-log-in"></i></a></li>
+		       			<li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i></a></li>		
+		       			</ul>-->
+		       			</ul> 
+		       			
+	                    </div>
+	                </div>
+		       	</div> 	 
+	    </div> 
+
+        <!-- Responcive Menu -->
+
+	    <!-- Main Menu --> 
+	     <!-- Breacrumb -->
+	    <div class="row">
+		  	<div class="container">
+		  	    <div class="col-xs-12 col-remove-lpadding">
+		            <div class="breadcrumb">
+			    		<ol>
+			    			<li><a href="home.html">الرئيسية</a></li>
+			    			<li><a href="#">سلة المشتريات</a></li>
+			    			
+			    		</ol>
+		    	   </div>
+		        </div>
+		    </div>	
+	    </div>
+	    <!-- Breacrumb -->
+
+	    <!--Cintent -->
+        <div class="row shooping-cart">
+        	<div class="container">
+        		<div class="col-md-9 col-xs-12">
+        			<div class="cart">
+	        			
+	        		    <h3>سلة المشتريات</h3>
+	        			<div class="col-xs-12 messages">
+		        			<div><p>لا يوجد أي منتج في سلة المشتريات.</p></div>
+		        		</div>
+		        		<div class="clearfix"></div>
+	        			<div class="cart-content">
+		        			
+	        				<div class="col-md-6 col-xs-12">
+	        				    <div class="col-sm-6 col-xs-12">
+	        					<img src="images/medicen1.jpg" class="img-responsive">
+	        					</div>
+	        					<div class="col-sm-6 col-xs-12">
+		        					<div class="medice-info">
+						        	<h3>Nam mollis porta</h3>
+						        	<h4>50.39$ <del>30.39$</del></h4>
+						        	</div>
+					        	</div>
+	        				</div>
+	        				<div class="col-md-6 col-xs-12">
+	        				   <div class="col-md-8 col-xs-6">
+	        					<div class="quantity">
+
+						        	<h4>الكمية</h4>
+				                    <div class="input-group spinner">
+					                      <input type="text" class="form-control" value="3">
+					                      <div class="input-group-btn-vertical">
+					                      <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+					                      <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+				                      </div>
+				                    </div>
+				                    <div class="clearfix"></div>
+				                    <h4> المبلغ: <span class="main-color">151.17$</span></h4>
+		        	            </div>
+		        	           </div>
+                               <div class="col-md-4 col-xs-4 delaet-item text-center">
+                               	 <i class="fa fa-trash-o fa-2x"></i>
+                               </div>
+
+
+	        				</div>
+	        				<div class="clearfix"></div>
+
+	        			</div>	
+        		    </div>
+        		    <div class="row">
+			        	<div class="col-xs-12">
+			        		<button class="btn btn-default shopping-btn"><i class="fa fa-angle-right"></i> تسوق 
+			        		</button>
+			        	</div>
+                    </div>
+
+
+        		</div>
+        		<div class="col-md-3 col-xs-12 col-remove-lpadding">
+        			<div class="shopping-info">
+        			<div class="row">
+        				<div class="col-md-12 line">
+	        				<div class="cart-summary-line clearfix">
+	        					<span  class="float-right">3 وحدات</span ><span  class="float-left">151.17$</span >
+	        				</div>
+	        				<div class="cart-summary-line clearfix">
+	        					<span class="text-left">الشحن</span ><span  class="text-right">7.0$</span >
+	        				</div>
+        				</div>
+        			</div>
+        			<div class="row">
+        				<div class="col-md-12">
+        					<div class="cart-summary-line clearfix margin-top">
+	        					<span  class="float-right">الضريبة</span ><span  class="float-left">0.0$</span >
+	        				</div>
+	        				<div class="cart-summary-line clearfix">
+	        					<span class="text-left">المبلغ</span ><span  class="text-right">158.17$</span >
+	        				</div>
+        				</div>
+        			</div>
+
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+       
+	    <!--Cintent -->
+
+	     <!-- Footer -->
+	        <div class="row">
+			    <div class="footer-section">
+			       	<div class="container">
+
+			       		<div class="col-sm-3">
+			       			<div class="tab"><span>اتصل بنا</span></div>
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-map-marker border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p>123 شارع فلسطين <br> قطاع غزة - فلسطين</p>
+			       				</div>
+			       			</div>
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-earphone border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p>88 123 456<br> 597 1234 45</p>
+			       				</div>
+			       			</div> 
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-envelope border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p> g@gmail.com <br> drug@gmail.com</p>
+			       				</div>
+			       			</div> 
+
+			       		</div>
+
+			       		<div class="col-sm-3">
+			       		    <div class="tab"><span>معلومات</span></div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">من نحن</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">المدونة</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">خدماتنا</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">الدقة والسرية</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">طريقة الدفع الإلكتروني</p></div>
+	                        </div> 
+
+			       		</div> 
+
+			       		<div class="col-sm-3"> 
+			       		    <div class="tab"><span>الخدمات</span></div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تسوق آمن</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تسويق عالمي</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تبديل وإرجاع المنتج</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">خدمة توصيل 24 ساعة</a></p></div>
+	                        </div>
+			       		</div> 
+
+			       		<div class="col-sm-3">
+				       		<div class="row">
+					       		<div class="col-sm-12">
+					       		<div class="tab"><span>اوقات العمل</span></div>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		</div> 
+			       		    </div>
+
+				       		<div class="row">
+					       		<div class="col-sm-12">
+					       		<div class="tab"><span>تابعونا</span></div>
+						       		<div class="social">
+			       		 			<a href="#"><i class="fa fa-facebook-square"></i></a>
+			        		        <a href="#"><i class="fa fa-twitter-square"></i></a>
+			        		        <a href="#"> <i class="fa fa-tumblr-square"></i></a>
+			        		        <a href="#"><i class="fa fa-pinterest-square"></i></a>
+			       		 		    </div>
+					       		</div> 
+				       		</div> 
+			       	    </div>                        
+                    </div> 
+                </div>
+			</div>  	    
+		       	  
+
+		    <div class="row copy-right">
+				<div class="col-sm-12 text-center">
+				    Copyright &copy; 2017 Ghada 	
+				</div> 	
+			</div>  
+	    <!-- Footer  -->  
+       <!-- Log In Modal-->
+	   <div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">تسجيل دخول</h4>
+		      </div>
+		      <div class="modal-body text-left">
+		        <form>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">االبريد الإلكتروني</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="g@gmail.com">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">كلمة المرور</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="كلمة المرور">
+				  </div>
+		      </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">تسجيل دخول</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+        <!-- Log In Modal -->
+
+
+        <a href="#" class="btn btn-default" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></a>
+
+	     </div>  <!-- end fluid container -->
+
+
+
+       <script src="js/jquery-3.2.1.min.js"></script>
+       <script src="Js/jquery.nicescroll.min.js"></script>
+       <script src="js/wow.js"></script>
+       <script src="js/bootstrap.js"></script>
+       <script src="js/bootstrapValidator.min.js"></script>
+       <script src="js/drugs.js"></script>
+	</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Drugs Store</title>
+		<link href="css/normalize.css" rel="stylesheet"> 
+		<link href="css/font-awesome.css" rel="stylesheet"> 
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+		<link href="css/bootstrapValidator.min.css" rel="stylesheet">
+		<link href="css/animation.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link href="css/drugs.css" rel="stylesheet">
+	</head>
+	<body>
+
+       <div class="container-fluid">
+
+        <!-- Search -->
+
+	       	<div class="row info-menu text-center">
+                <div class="container">
+                     <div class="col-sm-2 col-xs-3  logo-hide text-left">
+                        <img src="images/logo.png">
+                </div>
+            <div class="col-sm-6  col-sm-offset-1 col-xs-6 col-sx-offset-1 search">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control input-box" placeholder="إبحث هنا ..." >
+                    <span class="input-group-addon no-border-bg">
+                    <i class="glyphicon glyphicon-search"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-6 text-right icon-hide">
+            	<a href="#"><i class="glyphicon glyphicon-user"></i></a>
+            	<a href="#" data-toggle="modal" data-target="#myModal">
+            	<i class="glyphicon glyphicon-log-in"></i></a>
+            	<i></i>
+            </div>
+
+            <div class="col-sm-2 col-sm-offset-1 col-xs-3 left info-hide text-right">
+                <div class="row">
+                    <p class="phone">
+                        <i class="glyphicon glyphicon-phone-alt"></i>&emsp;010 4567 890
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="email">
+                        <i class="glyphicon glyphicon-envelope">&emsp;</i>g@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Search -->
+
+
+        
+
+        <!-- Main Menu -->
+	    <div class="row">
+	       	 <div class="main-menu">
+	       		<div class="container">
+	       		<div class="col-sm-8 col-xs-6">
+	       			<ul class="r-menu">
+	       				<li><a href="home.html">الرئيسية</a></li>
+	       				<li><a href="blogs.html">المدونة</a></li>
+	       				<li><a href="#">آراء العملاء</a></li>
+	       				<li><a href="#">من نحن</a></li>
+	       				<li><a href="#">خدامتنا</a></li>
+	       				<li><a href="contact.html">اتصل بنا</a></li>
+	       			</ul>
+	       			<button class="btn hamburger-btn"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+	       		</div>
+	       		<div class="col-sm-2 col-xs-3  border-l border-r">
+
+	       		<ul class="l-menu">
+	       				<li><a href="#">حسابي<i class="fa fa-angle-down"></i></a>
+	       				<div class="row">
+	       				<div class="col-md-12 col-xs-12">
+                         <ul class="sub-menu text-left">
+                         	<li><a href="#">حساب جديد</a></li>
+	       				    <li><a href="#" data-toggle="modal" data-target="#myModal">تسجيل دخول</a></li>
+                         </ul>
+                         </div>
+                         </div>
+	       				</li>
+	       				
+	       			</ul>
+	       			
+	       		</div>
+	       		<div class="col-sm-2 col-xs-3 border-l">
+	       		<div class="row">
+	       			<div class="cart text-center">
+	       				<span class="num-products">0 <i class="glyphicon glyphicon-shopping-cart"></i> - 0.0 &dollar; </span>
+	       			</div>
+	       		</div>
+	       		</div>
+	       		</div>
+	       	</div>
+	    </div>
+
+	    <!-- Responcive Menu -->
+
+        <div class="row">
+	          	<div class="second-menu">
+		       		<div class="col-sm-12 col-xs-12 text-center full-width-col">
+	                  <div class="container">
+		       		    <ul class="mobile-menu text-center">
+		       				<li><a href="home.html">الرئيسية</a></li>
+		       				<li><a href="blogs.html">المدونة</a></li>
+		       				<li><a href="#">آراء العملاء</a></li>
+		       				<li><a href="#">من نحن</a></li>
+		       				<li><a href="#">خدامتنا</a></li>
+		       				<li><a href="conact.html">اتصل بنا</a></li>
+		       			</ul> 
+		       			
+	                    </div>
+	                </div>
+		       	</div> 	 
+	    </div> 
+
+        <!-- Responcive Menu -->
+
+	    <!-- Main Menu --> 
+
+	     <!-- Content -->
+
+	    <!-- Breacrumb -->
+	    <div class="row">
+		  	<div class="container">
+		  	    <div class="col-xs-12">
+		            <div class="breadcrumb">
+			    		<ol>
+			    			<li><a href="home.html">الرئيسية</a></li>
+			    			<li><a href="#">المدونة</a></li>
+			    		</ol>
+		    	   </div>
+		        </div>
+		    </div>	
+	    </div>
+	    <!-- Breacrumb -->
+
+	    <!-- Content -->
+
+	    <div class="row blogs-details">
+	    	<div class="container">
+	    	    		
+	    	    <div class="col-sm-6 col-xs-12 ">
+	    	        <img src="images/t.jpg" class="img-responsive">
+
+	    	        <div class="article-info">
+	    	        <h3><a href="blogDetails.html">إكتشاف جديد لعلاج مرض الربو</a></h3>
+	    	    	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+
+	    	    	<span class="writer">غادة غانم</span>
+	    	    	
+	    	    	<span class="comment"><i class="fa fa-comment"></i> 5 تعليق</span>
+	    	    	<span><i class="fa fa-thumbs-up like"></i> 10 إعجاب</span>
+	    	    	<p>كشف باحثون أمريكيون عن نوع معين من الخلايا المناعية يمكن أن يتم استهدافها لعلاج الربو، وهذا الاكتشاف يمهد الطريق لعلاج مرض الربو، المعروف بحساسية الصدر وهو أحد أمراض الجهاز التنفسى المزمنة والتى تصيب ملايين البشر... <a href="blogDetails.html">المزيد</a></p>
+	    	    	
+                    </div>	
+
+	    	    </div>
+
+	    	    <div class="col-sm-6 col-xs-12">
+	    	       <img src="images/t.jpg" class="img-responsive">
+	    	       <div class="article-info">
+	    	        <h3><a href="blogDetails.html">إكتشاف جديد لعلاج مرض الربو</a></h3>
+	    	    	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+
+	    	    	<span class="writer">غادة غانم</span>
+	    	    	
+	    	    	<span class="comment"><i class="fa fa-comment"></i> 5 تعليق</span>
+	    	    	<span><i class="fa fa-thumbs-up like"></i> 10 إعجاب</span>
+	    	    	<p>كشف باحثون أمريكيون عن نوع معين من الخلايا المناعية يمكن أن يتم استهدافها لعلاج الربو، وهذا الاكتشاف يمهد الطريق لعلاج مرض الربو، المعروف بحساسية الصدر وهو أحد أمراض الجهاز التنفسى المزمنة والتى تصيب ملايين البشر... <a href="blogDetails.html">المزيد</a></p>
+	    	    	
+                    </div>
+	    	    </div>
+
+	    	     <div class="col-sm-6 col-xs-12 hidden-article">
+	    	        <img src="images/blog1.jpg" class="img-responsive">
+
+	    	        <div class="article-info">
+	    	        <h3><a href="blogDetails.html">إكتشاف جديد لعلاج مرض الربو</a></h3>
+	    	    	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+
+	    	    	<span class="writer">غادة غانم</span>
+	    	    	
+	    	    	<span class="comment"><i class="fa fa-comment"></i> 5 تعليق</span>
+	    	    	<span><i class="fa fa-thumbs-up like"></i> 10 إعجاب</span>
+	    	    	<p>كشف باحثون أمريكيون عن نوع معين من الخلايا المناعية يمكن أن يتم استهدافها لعلاج الربو، وهذا الاكتشاف يمهد الطريق لعلاج مرض الربو، المعروف بحساسية الصدر وهو أحد أمراض الجهاز التنفسى المزمنة والتى تصيب ملايين البشر... <a href="blogDetails.html">المزيد</a></p>
+	    	    	
+                    </div>	
+
+	    	    </div>
+
+
+                    <div class="col-sm-6 col-xs-12 col-remove-lpadding hidden-article">
+	    	        <img src="images/blog1.jpg" class="img-responsive">
+
+	    	        <div class="article-info">
+	    	        <h3><a href="blogDetails.html">إكتشاف جديد لعلاج مرض الربو</a></h3>
+	    	    	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+
+	    	    	<span class="writer">غادة غانم</span>
+	    	    	
+	    	    	<span class="comment"><i class="fa fa-comment"></i> 5 تعليق</span>
+	    	    	<span><i class="fa fa-thumbs-up like"></i> 10 إعجاب</span>
+	    	    	<p>كشف باحثون أمريكيون عن نوع معين من الخلايا المناعية يمكن أن يتم استهدافها لعلاج الربو، وهذا الاكتشاف يمهد الطريق لعلاج مرض الربو، المعروف بحساسية الصدر وهو أحد أمراض الجهاز التنفسى المزمنة والتى تصيب ملايين البشر... <a href="blogDetails.html">المزيد</a></p>
+	    	    	
+                    </div>	
+
+	    	    </div>
+
+
+	    	    <div class="col-xs-12 text-center">
+	    	    	<button class="btn btn-default more-btn">المزيد</button>
+	    	    </div>
+	    	</div>
+	    </div>
+
+
+	     <div class="row most-read">
+	    	<div class="container">
+	    	    		
+	    	    <div class="col-xs-12">
+		       		<div class="tab"><span>الأكثر قراءة</span></div> 
+		       		</div>
+		    	    <!-- Slider -->
+    
+		<div class="row most-read-slider">
+			<div class="col-sm-12">
+				
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+
+			   
+                <div class="item active">
+			       <div class="col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl2.jpg" class="img-responsive" alt="Person">
+			      		<div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="blogDetails.html">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>		              			
+                    	</div>
+                    </div>
+                
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl3.jpg" class="img-responsive" alt="Person">
+			      		<div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="blogDetails.html">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>			              			
+                    	</div>	
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl2.jpg" class="img-responsive" alt="Person">
+			      		<div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="blogDetails.html">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>			              			
+                    	</div> 
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl4.jpg" class="img-responsive" alt="Person">
+			      		<div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="blogDetails.html">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>				              			
+                    	</div>
+                    </div>
+
+                </div>
+ 
+
+                <div class="item">
+			       <div class=" col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl2.jpg" class="img-responsive" alt="Person">
+			            <div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="blogDetails.html">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>				              			
+                    	</div>
+                    </div>
+                
+
+                    <div class=" col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl3.jpg" class="img-responsive" alt="Person">
+			      		<div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="blogDetails.html">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>					              			
+                    	</div>
+                    </div>
+
+                    <div class=" col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl2.jpg" class="img-responsive" alt="Person">
+			      		<div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="#">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>		              			
+                    	</div>
+                    </div>
+
+                    <div class=" col-md-3 col-sm-6 col-xs-12">
+			      		<img src="images/articl4.jpg" class="img-responsive" alt="Person">
+			      		<div class="carousel-caption text-left">   
+			             	<span class="article-date"><i class="glyphicon glyphicon-calendar"></i> 05/06/2017</span>
+		    	        	<h4><a href="blogDetails.html">أضرار تناول السكر</a></h4>
+		    	        	<span><i class="fa fa-comment comment"></i> تعليق</span>
+			                <div class="social">
+				       		 	<a href="#"><i class="fa fa-facebook-square"></i></a>
+				        		<a href="#"><i class="fa fa-twitter-square"></i></a>
+				        		<a href="#"> <i class="fa fa-tumblr-square"></i></a>
+				        		<a href="#"><i class="fa fa-pinterest-square"></i></a>
+		       		      </div>				              			
+                    	</div>
+                    </div>
+
+                </div>
+
+
+                
+
+		     </div>
+
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+			  </ol>
+			 
+			</div>
+
+			</div>
+		</div>
+	
+	    <!-- Slider --> 
+
+               
+
+	    	</div>
+	    </div>
+
+
+	    <!-- Content -->
+
+
+       <!-- Footer -->
+	        <div class="row">
+			    <div class="footer-section">
+			       	<div class="container">
+
+			       		<div class="col-sm-3">
+			       			<div class="tab"><span>اتصل بنا</span></div>
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-map-marker border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p>123 شارع فلسطين <br> قطاع غزة - فلسطين</p>
+			       				</div>
+			       			</div>
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-earphone border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p>88 123 456<br> 597 1234 45</p>
+			       				</div>
+			       			</div> 
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-envelope border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p> g@gmail.com <br> drug@gmail.com</p>
+			       				</div>
+			       			</div> 
+
+			       		</div>
+
+			       		<div class="col-sm-3">
+			       		    <div class="tab"><span>معلومات</span></div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">من نحن</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">المدونة</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">خدماتنا</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">الدقة والسرية</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">طريقة الدفع الإلكتروني</p></div>
+	                        </div> 
+
+			       		</div> 
+
+			       		<div class="col-sm-3"> 
+			       		    <div class="tab"><span>الخدمات</span></div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تسوق آمن</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تسويق عالمي</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تبديل وإرجاع المنتج</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">خدمة توصيل 24 ساعة</a></p></div>
+	                        </div>
+			       		</div> 
+
+			       		<div class="col-sm-3">
+				       		<div class="row">
+					       		<div class="col-sm-12">
+					       		<div class="tab"><span>اوقات العمل</span></div>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		</div> 
+			       		    </div>
+
+				       		<div class="row">
+					       		<div class="col-sm-12">
+					       		<div class="tab"><span>تابعونا</span></div>
+						       		<div class="social">
+			       		 			<a href="#"><i class="fa fa-facebook-square"></i></a>
+			        		        <a href="#"><i class="fa fa-twitter-square"></i></a>
+			        		        <a href="#"> <i class="fa fa-tumblr-square"></i></a>
+			        		        <a href="#"><i class="fa fa-pinterest-square"></i></a>
+			       		 		    </div>
+					       		</div> 
+				       		</div> 
+			       	    </div>                        
+                    </div> 
+                </div>
+			</div>  	    
+		       	  
+
+		    <div class="row copy-right">
+				<div class="col-sm-12 text-center">
+				    Copyright &copy; 2017 Ghada 	
+				</div> 	
+			</div>  
+	    <!-- Footer  --> 
+
+
+
+
+
+
+       <!-- Modal -->
+	   <div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">تسجيل دخول</h4>
+		      </div>
+		      <div class="modal-body text-left">
+		        <form>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">االبريد الإلكتروني</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="g@gmail.com">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">كلمة المرور</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="كلمة المرور">
+				  </div>
+		      </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">تسجيل دخول</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+        <!-- Modal -->
+       <a href="#" class="btn btn-default" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></a>
+
+       </div>  <!-- end fluid container -->
+
+       <script src="js/jquery-3.2.1.min.js"></script>
+       <script src="Js/jquery.nicescroll.min.js"></script>
+       <script src="js/wow.js"></script>
+       <script src="js/bootstrap.js"></script>
+       <script src="js/bootstrapValidator.min.js"></script>
+       <script src="js/drugs.js"></script>
+	</body>
+</html>

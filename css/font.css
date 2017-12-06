@@ -1,0 +1,9 @@
+@font-face{
+  font-family:'Droid Arabic Kufi';
+  src: url('../fonts/webfont/droidkufi-bold.woff');
+}
+
+@font-face{ 
+  font-family:'droidkufi-regular';
+  src: url('../fonts/webfont/droidkufi-regular.woff');
+}

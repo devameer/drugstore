@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Drugs Store</title>
+		<link href="css/normalize.css" rel="stylesheet"> 
+		<link href="css/font-awesome.css" rel="stylesheet"> 
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+		<link href="css/bootstrapValidator.min.css" rel="stylesheet">
+		<link href="css/animation.css" rel="stylesheet">
+		<link href="css/font.css" rel="stylesheet">
+		<link href="css/drugs.css" rel="stylesheet">
+
+		<script>
+		var map;
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+		    center: {lat: 31.5213544, lng: 34.4437298},
+		    zoom: 12
+		  });
+		  
+		  var myLatLng={lat: 31.5213544, lng: 34.4437298};
+		  
+		    var marker = new google.maps.Marker({
+		    position: myLatLng,
+		    map: map,
+		    title: 'Hello World!'
+		  });
+		  
+		  var contentString='<div id="content">'+
+		      '<div id="siteNotice">'+
+		      '</div>'+
+		      '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+		      '<div id="bodyContent">'+
+		      '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+		      'sandstone rock formation in the southern part of the '+
+		      'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+		      'south west of the nearest large town, Alice Springs; 450&#160;km '+
+		      '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+		      'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+		      'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+		      'Aboriginal people of the area. It has many springs, waterholes, '+
+		      'rock caves and ancient paintings. Uluru is listed as a World '+
+		      'Heritage Site.</p>'+
+		      '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+		      'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+		      '(last visited June 22, 2009).</p>'+
+		      '</div>'+
+		      '</div>';
+			  
+			  var infoWindow = new google.maps.InfoWindow({
+				  content: contentString	  
+			  });
+			  
+			  marker.addListener('click', function() {
+		    infoWindow.open(map, marker);
+		  });
+			  
+			  
+			  
+		}
+		</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer></script>
+	</head>
+	<body>
+       <div class="container-fluid">
+
+
+        <!-- Search -->
+
+	       	<div class="row info-menu text-center">
+                <div class="container">
+                     <div class="col-sm-2 col-xs-3  logo-hide text-left">
+                        <img src="images/logo.png">
+                </div>
+            <div class="col-sm-6  col-sm-offset-1 col-xs-6 col-sx-offset-1 search">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control input-box" placeholder="إبحث هنا ..." >
+                    <span class="input-group-addon no-border-bg">
+                    <i class="glyphicon glyphicon-search"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-xs-6 text-right icon-hide">
+            	<a href="#"><i class="glyphicon glyphicon-user"></i></a>
+            	<a href="#" data-toggle="modal" data-target="#myModal">
+            	<i class="glyphicon glyphicon-log-in"></i></a>
+            	<i></i>
+            </div>
+
+            <div class="col-sm-2 col-sm-offset-1 col-xs-3 left info-hide text-right">
+                <div class="row">
+                    <p class="phone">
+                        <i class="glyphicon glyphicon-phone-alt"></i>&emsp;010 4567 890
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="email">
+                        <i class="glyphicon glyphicon-envelope">&emsp;</i>g@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Search -->
+
+
+        
+
+        <!-- Main Menu -->
+	    <div class="row">
+	       	 <div class="main-menu">
+	       		<div class="container">
+	       		<div class="col-sm-8 col-xs-6">
+	       			<ul class="r-menu">
+	       				<li><a href="home.html">الرئيسية</a></li>
+	       				<li><a href="blogs.html">المدونة</a></li>
+	       				<li><a href="#">آراء العملاء</a></li>
+	       				<li><a href="#">من نحن</a></li>
+	       				<li><a href="#">خدامتنا</a></li>
+	       				<li><a href="contact.html">اتصل بنا</a></li>
+	       			</ul>
+	       			<button class="btn hamburger-btn"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+	       		</div>
+	       		<div class="col-sm-2 col-xs-3  border-l border-r">
+
+	       		<ul class="l-menu">
+	       				<li><a href="#">حسابي<i class="fa fa-angle-down"></i></a>
+	       				<div class="row">
+	       				<div class="col-md-12 col-xs-12">
+                         <ul class="sub-menu text-left">
+                         	<li><a href="#">حساب جديد</a></li>
+	       				    <li><a href="#" data-toggle="modal" data-target="#myModal">تسجيل دخول</a></li>
+                         </ul>
+                         </div>
+                         </div>
+	       				</li>
+	       				
+	       			</ul>
+	       			
+	       		</div>
+	       		<div class="col-sm-2 col-xs-3 border-l">
+	       		<div class="row">
+	       			<a class="cart text-center" href="cart.html">
+	       				<span class="num-products">0 <i class="glyphicon glyphicon-shopping-cart"></i> - 0.0 &dollar; </span>
+	       			</a>
+	       		</div>
+	       		</div>
+	       		</div>
+	       	</div>
+	    </div>
+
+	    <!-- Responcive Menu -->
+
+        <div class="row">
+	          	<div class="second-menu">
+		       		<div class="col-sm-12 col-xs-12 text-center full-width-col">
+	                  <div class="container">
+		       		    <ul class="mobile-menu text-center">
+		       				<li><a href="home.html">الرئيسية</a></li>
+		       				<li><a href="blogs.html">المدونة</a></li>
+		       				<li><a href="#">آراء العملاء</a></li>
+		       				<li><a href="#">من نحن</a></li>
+		       				<li><a href="#">خدامتنا</a></li>
+		       				<li><a href="contact.html">اتصل بنا</a></li>
+		       			</ul> 
+		       			
+	                    </div>
+	                </div>
+		       	</div> 	 
+	    </div> 
+
+        <!-- Responcive Menu -->
+
+       <!-- Breacrumb -->
+	    <div class="row">
+		  	<div class="container">
+		  	    <div class="col-xs-12 col-remove-lpadding">
+		            <div class="breadcrumb">
+			    		<ol>
+			    			<li><a href="home.html">الرئيسية</a></li>
+			    			<li><a href="#">إتصل بنا</a></li>
+			    			
+			    		</ol>
+		    	   </div>
+		        </div>
+		    </div>	
+	    </div>
+	    <!-- Breacrumb -->
+
+
+       
+      <div class="row map">
+      	<div class="container">
+      		<div class="col-xs-12 col-remove-lpadding">
+      			<div id="map" style="width:100%;height:400px;"></div>
+      		</div>
+      	</div>
+      </div>
+    
+    <div class="row con-text">
+     <div class="container">
+	    <div class="col-xs-12">
+	    	<p>يمكنك الاتصال بنا للإستفسار أو التبيلغ عن مشكلة واجهتك أثناء تصفح الموقع 
+	أو تعرضك للإساءة من قبل أحد الأعضاء.</p>
+	    </div>
+	    </div>
+    </div>
+
+      <div class="row">
+      	<div class="container">
+      		<div class="col-md-4  col-sm-6 col-xs-12 contact-us">
+				      			<h3> معلومات الاتصال</h3>
+				      			<div class="row">
+			       				<div class="col-sm-2 col-xs-2 col-remove-lpadding ">
+			       					<i class="glyphicon glyphicon-map-marker border"></i>
+			       				</div>
+			       				<div class="col-sm-10 col-xs-10">
+			       					<p>123 شارع فلسطين <br> قطاع غزة - فلسطين</p>
+			       				</div>
+			       			</div>
+
+			       			<div class="row">
+			       				<div class="col-sm-2 col-xs-2 col-remove-lpadding">
+			       					<i class="glyphicon glyphicon-earphone border"></i>
+			       				</div>
+			       				<div class="col-sm-10 col-xs-10">
+			       					<p>88 123 456<br> 597 1234 45</p>
+			       				</div>
+			       			</div> 
+
+			       			<div class="row">
+			       				<div class="col-sm-2 col-xs-2 col-remove-lpadding">
+			       					<i class="glyphicon glyphicon-envelope border"></i>
+			       				</div>
+			       				<div class="col-sm-10 col-xs-10">
+			       					<p> g@gmail.com <br> drug@gmail.com</p>
+			       				</div>
+			       			</div> 
+
+      		</div>
+
+
+      		<div class="col-md-8 col-sm-6 col-xs-12">
+      			<h3> نموذج الإتصال</h3>
+
+      			<div class="comment-form">
+                    	<div class="row">
+
+                    	<form id="contactForm" method="">
+
+							  <div class="form-group col-sm-6">
+							    <label for="name">الإسم</label>
+							    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="غادة غانم">
+							  </div>
+							  <div class="form-group col-sm-6">
+							    <label for="email">البريد الإلكتروني</label>
+							    <input type="email" class="form-control" id="email" name="email"placeholder="g@gmail.com">
+							  </div>
+
+							  <div class="form-group col-xs-12">
+							    <label for="textarea">الرسالة</label>
+							    <textarea class="form-control" id="comment-area" name="content" placeholder="الرسالة ..."></textarea>
+							  </div>
+	                         
+	                         <!-- Success message -->
+								<div class="alert alert-success col-xs-12" role="alert" id="success_message"> تم إرسالة الرسالة بنجاح <i class="glyphicon glyphicon-thumbs-up"></i></div>
+
+							  <div class="form-group col-xs-12 text-right">
+							    <button type="submit" class="btn btn-default send-btn">أرسل</button>
+							  </div>
+
+                    	 </form>
+                        </div>
+                    </div>
+      		</div>
+      	</div>
+      </div>
+
+       <!-- Footer -->
+	        <div class="row">
+			    <div class="footer-section">
+			       	<div class="container">
+
+			       		<div class="col-sm-3">
+			       			<div class="tab"><span>اتصل بنا</span></div>
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-map-marker border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p>123 شارع فلسطين <br> قطاع غزة - فلسطين</p>
+			       				</div>
+			       			</div>
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-earphone border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p>88 123 456<br> 597 1234 45</p>
+			       				</div>
+			       			</div> 
+
+			       			<div class="row">
+			       				<div class="col-sm-3 col-xs-2 text-center">
+			       					<i class="glyphicon glyphicon-envelope border"></i>
+			       				</div>
+			       				<div class="col-sm-9 col-xs-10">
+			       					<p> g@gmail.com <br> drug@gmail.com</p>
+			       				</div>
+			       			</div> 
+
+			       		</div>
+
+			       		<div class="col-sm-3">
+			       		    <div class="tab"><span>معلومات</span></div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">من نحن</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">المدونة</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">خدماتنا</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">الدقة والسرية</a></p></div>
+	                        </div>
+
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">طريقة الدفع الإلكتروني</p></div>
+	                        </div> 
+
+			       		</div> 
+
+			       		<div class="col-sm-3"> 
+			       		    <div class="tab"><span>الخدمات</span></div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تسوق آمن</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تسويق عالمي</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">تبديل وإرجاع المنتج</a></p></div>
+	                        </div>
+	                        <div class="row">
+	                        	<div class="col-sm-12"><p><a href="#">خدمة توصيل 24 ساعة</a></p></div>
+	                        </div>
+			       		</div> 
+
+			       		<div class="col-sm-3">
+				       		<div class="row">
+					       		<div class="col-sm-12">
+					       		<div class="tab"><span>اوقات العمل</span></div>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		<p>السبت&emsp;5:00 - 9:00</p>
+					       		</div> 
+			       		    </div>
+
+				       		<div class="row">
+					       		<div class="col-sm-12">
+					       		<div class="tab"><span>تابعونا</span></div>
+						       		<div class="social">
+			       		 			<a href="#"><i class="fa fa-facebook-square"></i></a>
+			        		        <a href="#"><i class="fa fa-twitter-square"></i></a>
+			        		        <a href="#"> <i class="fa fa-tumblr-square"></i></a>
+			        		        <a href="#"><i class="fa fa-pinterest-square"></i></a>
+			       		 		    </div>
+					       		</div> 
+				       		</div> 
+			       	    </div>                        
+                    </div> 
+                </div>
+			</div>  	    
+		       	  
+
+		    <div class="row copy-right">
+				<div class="col-sm-12 text-center">
+				    Copyright &copy; 2017 Ghada 	
+				</div> 	
+			</div>  
+	    <!-- Footer  --> 
+	     <!-- Modal -->
+	   <div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">تسجيل دخول</h4>
+		      </div>
+		      <div class="modal-body text-left">
+		        <form>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">االبريد الإلكتروني</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="g@gmail.com">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">كلمة المرور</label>
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="كلمة المرور">
+				  </div>
+		      </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">تسجيل دخول</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+        <!-- Modal -->
+        <a href="#" class="btn btn-default" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></a>
+
+
+       </div>  <!-- end fluid container -->
+
+
+    
+
+       <script src="js/jquery-3.2.1.min.js"></script>
+       <script src="Js/jquery.nicescroll.min.js"></script>
+       <script src="js/wow.js"></script>
+       <script src="js/bootstrap.js"></script>
+       <script src="js/bootstrapValidator.min.js"></script>
+       <script src="js/drugs.js"></script>
+	</body>
+</html>
