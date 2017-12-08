@@ -1,1 +1,3 @@
-# drugstore
+# Drugstore
+
+## Installtion
