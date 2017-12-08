@@ -5,7 +5,6 @@
 * choose Download ZIP.
 
 ## Website features
-* [GitHub](http://github.com)
 * Based on Bootstrap 3.
 * Built with HTML CSS and CSS3 – W3C Validate Code.
 * Fully Responsive Design.
@@ -17,11 +16,11 @@
 * Logo.
 * photos.
 * font and Icon:
-  * [Droid Arabic Kufi Font] (https://fontlibrary.org/it/font/droid-arabic-kufi#Droid Arabic Kufi-Regular).
-  * [Font Awesome Icons] (http://fontawesome.io/icons/).
-  * [Glyph Icons] (https://getbootstrap.com/docs/3.3/components/#glyphicons).
+  * [Droid Arabic Kufi Font](https://fontlibrary.org/it/font/droid-arabic-kufi#Droid Arabic Kufi-Regular).
+  * [Font Awesome Icons](http://fontawesome.io/icons/).
+  * [Glyph Icons](https://getbootstrap.com/docs/3.3/components/#glyphicons).
 * Javascript:
-  * [jQuery] (http://jquery.com/).
-  * [Bootstrap] (http://getbootstrap.com/).
-  * [Animsition] (http://mynameismatthieu.com/WOW/). 
-  * [Bootstrapvalidator] (http://bootstrapvalidator.votintsev.ru/getting-started).
+  * [jQuery](http://jquery.com/).
+  * [Bootstrap](http://getbootstrap.com/).
+  * [Animsition](http://mynameismatthieu.com/WOW/). 
+  * [Bootstrapvalidator](http://bootstrapvalidator.votintsev.ru/getting-started).
