@@ -12,7 +12,7 @@
 * Working Contact Form with Bootstrap Validator.
 * and much more…
 
-##Credits
+## Credits
 *Logo.
 * photos.
 * font and Icon:
