@@ -16,7 +16,7 @@
 * Logo.
 * photos.
 * font and Icon:
-  * [Droid Arabic Kufi Font](https://fontlibrary.org/it/font/droid-arabic-kufi#Droid Arabic Kufi-Regular).
+  * [Droid Arabic Kufi Font](https://fontlibrary.org/it/font/droid-arabic-kufi#Droid).
   * [Font Awesome Icons](http://fontawesome.io/icons/).
   * [Glyph Icons](https://getbootstrap.com/docs/3.3/components/#glyphicons).
 * Javascript:
