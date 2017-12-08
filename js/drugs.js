@@ -1,21 +1,20 @@
 $(function(){
-
+ 
+ /*Firing WOW animation library*/
   new WOW().init();
 
-	
- var scroll= function(){$("html").niceScroll({
+ /*Firing nice scroll library */
+  var scroll= function(){$("html").niceScroll({
      	cursorcolor: "#89C532",
      	cursorwidth: "10px",
      	cursorborder: "1 solid #f7600e",
      	cursorborderradius: "0px",
-
      });
 }
+  scroll();
 
-scroll();
 
-
-//Check to see if the window is top if not then display button
+  //Check to see if the window is top if not then display button
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
       $('#myBtn').fadeIn();
@@ -30,85 +29,62 @@ scroll();
     return false;
   });
 
-
-$('.cart-btn, .add-btn').on('click',function(){
-  $(location).attr('href','cart.html');
-});
-
-
-
-$('.shopping-btn').on('click',function(){
-  $(location).attr('href','medicineDetails.html');
-
-});
-
-$(".delaet-item i").on('click', function(){
-  $('.cart-content').css("display", "none");
-  $('.messages').css("display", "block");
-});
-
-
-
-
-   /*$('.main-menu .r-menu li:nth-child(2)').click(function(){
-    $('html , body').animate({ 
-     scrollTop: $('.articles').offset().top}, 500);
-	}); 
-
-    $('.main-menu .r-menu li:nth-child(6)').click(function(){
-    $('html , body').animate({ 
-     scrollTop: $('.footer-section , .newsletter').offset().top}, 500);
+  /*Click event to shooping cart page*/
+  $('.cart-btn, .add-btn').on('click',function(){
+    $(location).attr('href','cart.html');
   });
 
+ /*Click event to medicineDetails page*/
+  $('.shopping-btn').on('click',function(){
+  $(location).attr('href','medicineDetails.html');
+  });
 
-   */
+  /*Remove product from shopping cart*/
+  $(".delaet-item i").on('click', function(){
+    $('.cart-content').css("display", "none");
+    $('.messages').css("display", "block");
+  });
 
+  /*Move to about us section*/
   $('.main-menu .r-menu li:nth-child(4)').click(function(){
     $('html , body').animate({ 
      scrollTop: $('.about-us').offset().top}, 500);
   });
 
-
-
-
-
+  /*Move to client section*/ 
    $('.main-menu .r-menu li:nth-child(3)').click(function(){
     $('html , body').animate({ 
      scrollTop: $('.clients').offset().top}, 500);
 	});
   
-
+  /*Move to services section*/ 
    $('.main-menu .r-menu li:nth-child(5)').click(function(){
     $('html , body').animate({ 
      scrollTop: $('.services').offset().top}, 500);
 	});
 
- 
+  /*Move to add comment section */ 
    $('.article-info  .comment').click(function(){
     $('html , body').animate({ 
      scrollTop: $('.comment-section').offset().top}, 500);
   });
  
+ /*show/hide hamburger menu*/ 
+  $('.hamburger-btn').on('click',function(){ 
+  	$('.mobile-menu').slideToggle(500);	
+  });
 
-    /*$('.mobile-menu').hide();*/
-    $('.hamburger-btn').on('click',function(){ 
-    	   $('.mobile-menu').slideToggle(500);	
-    });
-
-  
-
+ /*show/hide Account mnu*/
   $('.l-menu').hover(function(){
-      $('.sub-menu').slideDown().show(500);
-        
+    $('.sub-menu').slideDown().show(500);    
     },function(){
       $('.sub-menu').slideUp().hide(500);       
-    });
+  });
 
+  /*show/hide user comments*/
+  $('.comment-box.hide-comment-box').hide();
 
-
-$('.comment-box.hide-comment-box').hide();
-
-$('.comment-section .arrow i').click(function(){
+  $('.comment-section .arrow i').click(function(){
 
     $('.comment-box.hide-comment-box').toggle(1000); 
 
@@ -116,51 +92,48 @@ $('.comment-section .arrow i').click(function(){
         $(this).removeClass('fa-chevron-down').addClass('fa-chevron-up');
       }else{
         $(this).removeClass('fa-chevron-up').addClass('fa-chevron-down')
-      }   
-    
+      }      
   });
-
-  
-  /* Increament */
-
+ 
+/* Increament */
   $('.spinner .btn:first-of-type').on('click', function() {
     $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
   });
-  $('.spinner .btn:last-of-type').on('click', function() {
-    $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-  });
 
+  $('.spinner .btn:last-of-type').on('click', function() {
+    if($('.spinner input').val() == 1){
+  $('.spinner input').val(parseInt($('.spinner input').val(), 10)) == 1;
+    }else{
+    $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+    }  
+  });
 /* Increament */
 
-$('.medicine-details-wrap').hide();
- 
-$('a.details').click(function(){
-$('.edicine-details-wrap').show(1000);
-});
+  $('.medicine-details-wrap').hide();  
+  $('a.details').click(function(){
+  $('.medicine-details-wrap').show(1000);
+  });
 
 
 /* show blogs */
-$('.hidden-article').hide();
- $('.more-btn').click(function(){
+  $('.hidden-article').hide();
+  $('.more-btn').click(function(){
     $('.blogs-details .hidden-article').toggle(1000);
-   });
-
+  });
 /* show blods */
 
-$('.hidden-arrow').click(function(){
-
+/*Change arrow*/
+  $('.hidden-arrow').click(function(){
     $('.box-products').toggle(1000); 
-
       if($('.hidden-arrow').hasClass('fa fa-chevron-down')){
         $(this).removeClass('fa-chevron-down').addClass('fa-chevron-up');
       }else{
         $(this).removeClass('fa-chevron-up').addClass('fa-chevron-down')
-      }   
-    
+      }     
   });
+/*Change arrow*/
 
 /* open tab */
-
   $('.medicine-tab .tab-link ').on("click",function(e){
     var tab_id = $(this).attr('data-tab');
 
@@ -169,17 +142,16 @@ $('.hidden-arrow').click(function(){
     $(this).addClass('current');
     $("#"+tab_id).addClass('current');
      e.preventDefault()
-
   });
-
 /* open tab */
 
-
+/*stop a default event in footer section */
   $('.footer-section a').on('click',function(e){ 
-         e.preventDefault(); 
-    });
+    e.preventDefault(); 
+  });
+/*stop a default event in footer section */
 
- ///Function to animate slider captions 
+/*Function to animate slider captions*/ 
   function doAnimations( elems ) {
     //Cache the animationend event in a variable
     var animEndEv = 'webkitAnimationEnd animationend';
@@ -187,7 +159,7 @@ $('.hidden-arrow').click(function(){
     elems.each(function () {
       var $this = $(this),
         $animationType = $this.data('animation');
-      $this.addClass($animationType).one(animEndEv, function () {
+        $this.addClass($animationType).one(animEndEv, function () {
         $this.removeClass($animationType);
       });
     });
@@ -206,17 +178,17 @@ $('.hidden-arrow').click(function(){
   //Pause carousel  
   $myCarousel.carousel('pause');
   
-  
   //Other slides to be animated on carousel slide event 
   $myCarousel.on('slide.bs.carousel', function (e) {
     var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
     doAnimations($animatingElems);
-  });  
+  });
+/*Function to animate slider captions*/ 
   
 /* validation */
 
 /* validation for contact form */
- $('#contactForm').bootstrapValidator({
+  $('#contactForm').bootstrapValidator({
         container: '#messages',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -255,17 +227,13 @@ $('.hidden-arrow').click(function(){
                     }
                 }
               }
-            }
-      
-    });
-
-
+            }     
+  });
 /* validation for contact form */
 
 /* validation for comment form */
-
- $('#commentForm').bootstrapValidator({
-     button: {
+  $('#commentForm').bootstrapValidator({
+      button: {
           selector: '[type="submit"]',
       },
         feedbackIcons: {
@@ -310,26 +278,21 @@ $('.hidden-arrow').click(function(){
         $('#success_message').show(); 
         return false; 
          }
-
-
-    });
-
-
+  });
 /* validation for comment form  */
 
 
 /* Register Form validation using bootstrap validation register page*/
-
 $('#registerForm').bootstrapValidator({
-        button: {
+      button: {
         selector: '[type="submit"]',
-    },
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
+      },
+      feedbackIcons: {
+          valid: 'glyphicon glyphicon-ok',
+          invalid: 'glyphicon glyphicon-remove',
+          validating: 'glyphicon glyphicon-refresh'
+      },
+      fields: {
             first_name: {
                 validators: {
                         stringLength: {
@@ -341,7 +304,7 @@ $('#registerForm').bootstrapValidator({
                     }
                 }
             },
-             last_name: {
+            last_name: {
                 validators: {
                      stringLength: {
                       message: 'إسم العائلة يجب أن يتكون من 5 أحرف على الأقل',
@@ -400,211 +363,24 @@ $('#registerForm').bootstrapValidator({
                     }
                 }
             }
-          },
-    submitHandler: function(validator, form, submitButton) {
+      },
+      submitHandler: function(validator, form, submitButton) {
          $('#success_message').show();
          var delay = 2000; 
-        setTimeout(function(){$(location).attr('href','home.html');}, delay);
-         //e.preventDefault(); 
-        /*validator.defaultSubmit();*/             
-        return false;    
-
-    } 
-
+         setTimeout(function(){$(location).attr('href','home.html');}, delay);       
+         return false;    
+      } 
 });
+/* Register Form validation using bootstrap validation register page*/
 
-/*.on('success.form.bv', function(e) {
-
-            //alert("ggg");
-            $('#success_message').slideDown({ opacity: "show" }, "slow");// Do something ...
-                $('#registerForm').data('bootstrapValidator').resetForm();
-
-           // Prevent form submission
-           e.preventDefault();
-
-            // Get the form instance
-            var $form = $(e.target);
-
-            // Get the BootstrapValidator instance
-            var bv = $form.data('bootstrapValidator');
-
-            // Use Ajax to submit form data
-            $.post($form.attr('action'), $form.serialize(), function(result) {
-                console.log(result);
-            }, 'json');
-        });*/
-
-/* Register Form validation*/ 
-
-/*Register Form validation test page
-$('#first_name_error_mess').hide();
-$('#last_name_error_mess').hide();
-$('#username_error_mess').hide();
-$('#password_error_mess').hide();
-$('#confirm_password_error_mess').hide();
-$('#email_error_mess').hide();
-
-
-var error_first_name = false;
-var error_last_name = false;
-var error_username = false;
-var error_password = false;
-var error_confirm_password = false;
-var error_email= false;
-
-
-$('#first_name').focusout(function(){
-   check_firstname();
-
-});
-
-$('#last_name').focusout(function(){
-   check_lastname();
-
-});
-
-$('#user_name').focusout(function(){
-   check_username();
-
-});
-
-$('#user_password').focusout(function(){
-   check_password();
-
-});
-
-$('#confirm_password').focusout(function(){
-   check_confirmpassword();
-
-});
-
-$('#email').focusout(function(){
-   check_email();
-
-});
-
-
-function check_firstname(){
-  var firstname_length = $('#first_name').val().length;
-  if(firstname_length <5){
-    $('#first_name_error_mess').html('الإسم الأول يجب أن يتكون من 5 أحرف على الأقل');
-    $('#first_name_error_mess').show();
-    error_first_name = true;
-  }else{
-     $('#first_name_error_mess').hide();
-  }
-
-}
-
-
-function check_lastname(){
-  var lastname_length = $('#last_name').val().length;
-   if(lastname_length < 5){
-    $('#last_name_error_mess').html('إسم العائلة يجب أن يتكون من 5 أحرف على الأقل');
-    $('#last_name_error_mess').show();
-    error_last_name = true;
-  }else{
-     $('#last_name_error_mess').hide();
-  }
-
-}
-
-function  check_username(){
-  var username_length = $('#user_name').val().length;
-   if(username_length < 5){
-    $('#username_error_mess').html('إسم المستخدم يجب أن يتكون من 5 أحرف على الأقل');
-    $('#username_error_mess').show();
-    error_username = true;
-  }else{
-     $('#username_error_mess').hide();
-  }
-
-}
-
-
-function  check_password(){
-  var password_length = $('#user_password').val().length;
-   if(password_length < 8){
-    $('#password_error_mess').html('كلمة المرور يجب أن يتكون من 8 أحرف على الأقل');
-    $('#password_error_mess').show();
-    error_password = true;
-  }else{
-     $('#password_error_mess').hide();
-  }
-
-}
-
-
-function  check_confirmpassword(){
-  var password = $('#user_password').val();
-  var confirmpassword = $('#confirm_password').val();
-
-   if(password != confirmpassword){
-    $('#confirm_password_error_mess').html('كلمة المرور غير متطابقة');
-    $('#confirm_password_error_mess').show();
-    error_confirm_password = true;
-  }else{
-     $('#confirm_password_error_mess').hide();
-  }
-
-}
-
-function  check_email(){
-  var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-   if(pattern.test($('#email').val())){
-    $('#email_error_mess').hide();
-    
-  }else{
-     $('#email_error_mess').html('عنوان البريد الإلكتروني غير صالح');
-    $('#email_error_mess').show();
-    error_email = true;
-  }
-
-}
-
-
-$('#register-btn').on('click',function(){
-    var error_first_name = false;
-    var error_last_name = false;
-    var error_username = false;
-    var error_password = false;
-    var error_confirm_password = false;
-    var error_email= false;
-   
-    check_firstname();
-    check_lastname();
-    check_username();
-    check_password();
-    check_confirmpassword();
-    check_email();
-
-   if(error_first_name == false && error_last_name == false &&
-    error_username == false && error_password == false && error_confirm_password == false &&
-    error_email == false){
-
-     return true;
-
-   }else{
-    //console.log('dd');
-   $('#success_message').show();
-     return false;
-
-   }
-
-  
-});
-
-
-Register Form validation */
 });
 
 
 /* Preloder Page */
 
 $(window).on("load",function(){
-$(".preloader img").fadeOut(2000,function(){
-$(".preloader").fadeOut(100);
+  $(".preloader img").fadeOut(1000,function(){
+  $(".preloader").fadeOut(100);
  });
 
 });
