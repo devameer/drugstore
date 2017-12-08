@@ -94,77 +94,94 @@ $(function(){
         $(this).removeClass('fa-chevron-up').addClass('fa-chevron-down')
       }      
   });
- 
-/* Increament */
-  $('.spinner .btn:first-of-type').on('click', function() {
-    $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-  });
+  /*show/hide user comments*/
 
-  $('.spinner .btn:last-of-type').on('click', function() {
-    if($('.spinner input').val() == 1){
-  $('.spinner input').val(parseInt($('.spinner input').val(), 10)) == 1;
-    }else{
-    $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-    }  
-  });
-/* Increament */
+ 
+  /* Increament */
+    $('.spinner .btn:first-of-type').on('click', function() {
+      $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+    });
+
+    $('.spinner .btn:last-of-type').on('click', function() {
+      if($('.spinner input').val() == 1){
+    $('.spinner input').val(parseInt($('.spinner input').val(), 10)) == 1;
+      }else{
+      $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+      }  
+    });
+  /* Increament */
 
   $('.medicine-details-wrap').hide();  
   $('a.details').click(function(){
-  $('.medicine-details-wrap').show(1000);
+    $('.medicine-details-wrap').show(1000);
   });
 
-
-/* show blogs */
-  $('.hidden-article').hide();
-  $('.more-btn').click(function(){
-    $('.blogs-details .hidden-article').toggle(1000);
-  });
-/* show blods */
-
-/*Change arrow*/
-  $('.hidden-arrow').click(function(){
-    $('.box-products').toggle(1000); 
-      if($('.hidden-arrow').hasClass('fa fa-chevron-down')){
-        $(this).removeClass('fa-chevron-down').addClass('fa-chevron-up');
+  /* show blogs */
+    $('.more-btn').click(function(){
+      $('.blogs-details .hidden-article').toggle(1000);
+      if($.trim($(this).text()) === 'المزيد'){
+        $(this).text('إخفاء');
       }else{
-        $(this).removeClass('fa-chevron-up').addClass('fa-chevron-down')
-      }     
-  });
-/*Change arrow*/
-
-/* open tab */
-  $('.medicine-tab .tab-link ').on("click",function(e){
-    var tab_id = $(this).attr('data-tab');
-
-    $('.medicine-tab .tab-link').removeClass('current');
-    $('.tab-content').removeClass('current');
-    $(this).addClass('current');
-    $("#"+tab_id).addClass('current');
-     e.preventDefault()
-  });
-/* open tab */
-
-/*stop a default event in footer section */
-  $('.footer-section a').on('click',function(e){ 
-    e.preventDefault(); 
-  });
-/*stop a default event in footer section */
-
-/*Function to animate slider captions*/ 
-  function doAnimations( elems ) {
-    //Cache the animationend event in a variable
-    var animEndEv = 'webkitAnimationEnd animationend';
-    
-    elems.each(function () {
-      var $this = $(this),
-        $animationType = $this.data('animation');
-        $this.addClass($animationType).one(animEndEv, function () {
-        $this.removeClass($animationType);
-      });
+       $(this).text('المزيد');
+      }
+       return false; 
     });
-  }
-  
+  /* show blods */
+
+  /*Change arrow*/
+    $('.hidden-arrow').on('click',function(){
+      if(this.hasClass('fa-chevron-down')){
+        this.removeClass('fa-chevron-down');
+        $('.box-products').slideDown(1000,function(){
+         $('.hidden-arrow').addClass('fa-chevron-up'); 
+        }); 
+      }
+      else{
+        this.removeClass('fa-chevron-up');
+        this.addClass('fa-chevron-down');
+        $('.box-products').slideUp(1000);
+        $('.hidden-arrow').addClass('fa-chevron-up').removeClass('fa-chevron-down');
+        $('.box-products').slideDown(1000,function(){
+          $('.hidden-arrow').addClass('fa-chevron-up');
+        });
+        
+      } 
+
+    });
+  /*Change arrow*/
+
+  /* open tab */
+    $('.medicine-tab .tab-link ').on("click",function(e){
+      var tab_id = $(this).attr('data-tab');
+
+      $('.medicine-tab .tab-link').removeClass('current');
+      $('.tab-content').removeClass('current');
+      $(this).addClass('current');
+      $("#"+tab_id).addClass('current');
+       e.preventDefault()
+    });
+  /* open tab */
+
+  /*stop a default event in footer section */
+    $('.footer-section a').on('click',function(e){ 
+      e.preventDefault(); 
+    });
+  /*stop a default event in footer section */
+
+  /*Function to animate slider captions*/ 
+    function doAnimations( elems ) {
+      //Cache the animationend event in a variable
+      var animEndEv = 'webkitAnimationEnd animationend';
+      
+      elems.each(function () {
+        var $this = $(this),
+          $animationType = $this.data('animation');
+          $this.addClass($animationType).one(animEndEv, function () {
+          $this.removeClass($animationType);
+        });
+      });
+    }
+    
   //Variables on page load 
   var $myCarousel = $('#myCarousel'),
     $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
@@ -183,205 +200,204 @@ $(function(){
     var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
     doAnimations($animatingElems);
   });
-/*Function to animate slider captions*/ 
+ /*Function to animate slider captions*/ 
   
-/* validation */
+ /* validation */
 
-/* validation for contact form */
-  $('#contactForm').bootstrapValidator({
-        container: '#messages',
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
+  /* validation for contact form */
+    $('#contactForm').bootstrapValidator({
+          container: '#messages',
+          feedbackIcons: {
+              valid: 'glyphicon glyphicon-ok',
+              invalid: 'glyphicon glyphicon-remove',
+              validating: 'glyphicon glyphicon-refresh'
+          },
+          fields: {
+              fullName: {
+                  validators: {
+                  /* stringLength:{
+                           min:5
+                                },*/
+                      notEmpty: {
+                          message:'قم بإدخالك اسمك بالكامل'
+                      }
+                  }
+              },
+              email: {
+                  validators: {
+                      notEmpty: {
+                          message: 'قم بإدخال بريدك الإلكتروني'
+                      },
+                      emailAddress: {
+                          message: 'عنوان البريد الإلكتروني غير صالح'
+                      }
+                  }
+              },
+              content: {
+                  validators: {
+                      notEmpty: {
+                          message: 'قم بإدخال نص الرسالة'
+                      },
+                      stringLength: {
+                          max: 500,
+                          message: 'يجب ألا يزيد طول نص الرسالة عن 500 حرف '
+                      }
+                  }
+                }
+              }     
+    });
+  /* validation for contact form */
+
+  /* validation for comment form */
+    $('#commentForm').bootstrapValidator({
+        button: {
+            selector: '[type="submit"]',
         },
-        fields: {
-            fullName: {
-                validators: {
-                /* stringLength:{
-                         min:5
-                              },*/
-                    notEmpty: {
-                        message:'قم بإدخالك اسمك بالكامل'
-                    }
+          feedbackIcons: {
+              valid: 'glyphicon glyphicon-ok',
+              invalid: 'glyphicon glyphicon-remove',
+              validating: 'glyphicon glyphicon-refresh'
+          },
+          fields: {
+              fullName: {
+                  validators: {
+                  /* stringLength:{
+                           min:5
+                                },*/
+                      notEmpty: {
+                          message:'قم بإدخالك اسمك بالكامل'
+                      }
+                  }
+              },
+              email: {
+                  validators: {
+                      notEmpty: {
+                          message: 'قم بإدخال بريدك الإلكتروني'
+                      },
+                      emailAddress: {
+                          message: 'عنوان البريد الإلكتروني غير صالح'
+                      }
+                  }
+              },
+              content: {
+                  validators: {
+                      notEmpty: {
+                          message: 'قم بكتابة محتوى التعليق'
+                      },
+                      stringLength: {
+                          max: 500,
+                          message: 'يجب ألا يزيد طول التعليق عن 500 حرف '
+                      }
+                  }
                 }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'قم بإدخال بريدك الإلكتروني'
-                    },
-                    emailAddress: {
-                        message: 'عنوان البريد الإلكتروني غير صالح'
-                    }
-                }
-            },
-            content: {
-                validators: {
-                    notEmpty: {
-                        message: 'قم بإدخال نص الرسالة'
-                    },
-                    stringLength: {
-                        max: 500,
-                        message: 'يجب ألا يزيد طول نص الرسالة عن 500 حرف '
-                    }
-                }
-              }
-            }     
-  });
-/* validation for contact form */
+              },
+         submitHandler: function(validator, form, submitButton) {
+          $('#success_message').show(); 
+          return false; 
+           }
+    });
+  /* validation for comment form  */
 
-/* validation for comment form */
-  $('#commentForm').bootstrapValidator({
-      button: {
+
+  /* Register Form validation using bootstrap validation register page*/
+  $('#registerForm').bootstrapValidator({
+        button: {
           selector: '[type="submit"]',
-      },
+        },
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            fullName: {
-                validators: {
-                /* stringLength:{
-                         min:5
-                              },*/
-                    notEmpty: {
-                        message:'قم بإدخالك اسمك بالكامل'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'قم بإدخال بريدك الإلكتروني'
-                    },
-                    emailAddress: {
-                        message: 'عنوان البريد الإلكتروني غير صالح'
-                    }
-                }
-            },
-            content: {
-                validators: {
-                    notEmpty: {
-                        message: 'قم بكتابة محتوى التعليق'
-                    },
-                    stringLength: {
-                        max: 500,
-                        message: 'يجب ألا يزيد طول التعليق عن 500 حرف '
-                    }
-                }
+              first_name: {
+                  validators: {
+                          stringLength: {
+                          message: 'الإسم الأول يجب أن يتكون من 5 أحرف على الأقل',   
+                          min: 5,
+                      },
+                          notEmpty: {
+                          message: 'ادخل الإسم الأول'
+                      }
+                  }
+              },
+              last_name: {
+                  validators: {
+                       stringLength: {
+                        message: 'إسم العائلة يجب أن يتكون من 5 أحرف على الأقل',
+                          min: 2,
+                      },
+                      notEmpty: {
+                          message: 'أدخل إسم العائلة'
+                      }
+                  }
+              },
+              user_name: {
+                  validators: {
+                       stringLength: {
+                         message: 'إسم المستخد يجب أن يتكون من 5 أحرف على الأقل',
+                          min: 8,
+                      },
+                      notEmpty: {
+                          message: 'أدخل إسم المستخدم'
+                      }
+                  }
+              },
+              user_password: {
+                  validators: {
+                       stringLength: {
+                          message:'كلمة المرور يجب أن تتكون من 8 خانات على الأقل',
+                          min: 8,
+                      },
+                      notEmpty: {
+                          message: 'أدخل كلمة المرور'
+                      }
+                  }
+              },
+             confirm_password: {
+                  validators: {
+                       stringLength: {
+                        message:'كلمة المرور يجب أن تتكون من 8 أحرف على الأقل',
+                          min: 8,
+                      },
+                      notEmpty: {
+                          message: 'أدخل كلمة المرور'
+                      },
+                      identical: {
+                     field: 'user_password',
+                     message: 'كلمة المرور وتأكيدها غير متطابقة'
+                  }
+
+                  }
+              },
+              email: {
+                  validators: {
+                      notEmpty: {
+                          message: 'أدخل بريدك الإلكتورني'
+                      },
+                      emailAddress: {
+                          message: 'عنوان البريد الإلكتروني غير صالح'
+                      }
+                  }
               }
-            },
-       submitHandler: function(validator, form, submitButton) {
-        $('#success_message').show(); 
-        return false; 
-         }
+        },
+        submitHandler: function(validator, form, submitButton) {
+           $('#success_message').show();
+           var delay = 2000; 
+           setTimeout(function(){$(location).attr('href','home.html');}, delay);       
+           return false;    
+        } 
   });
-/* validation for comment form  */
-
-
-/* Register Form validation using bootstrap validation register page*/
-$('#registerForm').bootstrapValidator({
-      button: {
-        selector: '[type="submit"]',
-      },
-      feedbackIcons: {
-          valid: 'glyphicon glyphicon-ok',
-          invalid: 'glyphicon glyphicon-remove',
-          validating: 'glyphicon glyphicon-refresh'
-      },
-      fields: {
-            first_name: {
-                validators: {
-                        stringLength: {
-                        message: 'الإسم الأول يجب أن يتكون من 5 أحرف على الأقل',   
-                        min: 5,
-                    },
-                        notEmpty: {
-                        message: 'ادخل الإسم الأول'
-                    }
-                }
-            },
-            last_name: {
-                validators: {
-                     stringLength: {
-                      message: 'إسم العائلة يجب أن يتكون من 5 أحرف على الأقل',
-                        min: 2,
-                    },
-                    notEmpty: {
-                        message: 'أدخل إسم العائلة'
-                    }
-                }
-            },
-            user_name: {
-                validators: {
-                     stringLength: {
-                       message: 'إسم المستخد يجب أن يتكون من 5 أحرف على الأقل',
-                        min: 8,
-                    },
-                    notEmpty: {
-                        message: 'أدخل إسم المستخدم'
-                    }
-                }
-            },
-            user_password: {
-                validators: {
-                     stringLength: {
-                        message:'كلمة المرور يجب أن تتكون من 8 خانات على الأقل',
-                        min: 8,
-                    },
-                    notEmpty: {
-                        message: 'أدخل كلمة المرور'
-                    }
-                }
-            },
-           confirm_password: {
-                validators: {
-                     stringLength: {
-                      message:'كلمة المرور يجب أن تتكون من 8 أحرف على الأقل',
-                        min: 8,
-                    },
-                    notEmpty: {
-                        message: 'أدخل كلمة المرور'
-                    },
-                    identical: {
-                   field: 'user_password',
-                   message: 'كلمة المرور وتأكيدها غير متطابقة'
-                }
-
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'أدخل بريدك الإلكتورني'
-                    },
-                    emailAddress: {
-                        message: 'عنوان البريد الإلكتروني غير صالح'
-                    }
-                }
-            }
-      },
-      submitHandler: function(validator, form, submitButton) {
-         $('#success_message').show();
-         var delay = 2000; 
-         setTimeout(function(){$(location).attr('href','home.html');}, delay);       
-         return false;    
-      } 
-});
-/* Register Form validation using bootstrap validation register page*/
+  /* Register Form validation using bootstrap validation register page*/
 
 });
 
 
 /* Preloder Page */
-
 $(window).on("load",function(){
   $(".preloader img").fadeOut(1000,function(){
   $(".preloader").fadeOut(100);
  });
-
 });
+/* Preloder Page */
 
