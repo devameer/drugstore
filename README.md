@@ -16,11 +16,11 @@
 * Logo.
 * photos.
 * font and Icon:
-  * [Droid Arabic Kufi Font](https://fontlibrary.org/it/font/droid-arabic-kufi#Droid Arabic Kufi-Regular) 3a .
-  * [Font Awesome Icons](http://fontawesome.io/icons/)3b .
-  * [Glyph Icons](https://getbootstrap.com/docs/3.3/components/#glyphicons) 3c .
+  * [Droid Arabic Kufi Font] (https://fontlibrary.org/it/font/droid-arabic-kufi#Droid Arabic Kufi-Regular).
+  * [Font Awesome Icons] (http://fontawesome.io/icons/).
+  * [Glyph Icons] (https://getbootstrap.com/docs/3.3/components/#glyphicons).
 * Javascript:
-  * [jQuery](http://jquery.com/) 4a .
-  * [Bootstrap](http://getbootstrap.com/) 4b .
-  * [Animsition](http://mynameismatthieu.com/WOW/) 4c . 
-  * [Bootstrapvalidator](http://bootstrapvalidator.votintsev.ru/getting-started) 4d .
+  * [jQuery] (http://jquery.com/).
+  * [Bootstrap] (http://getbootstrap.com/).
+  * [Animsition] (http://mynameismatthieu.com/WOW/). 
+  * [Bootstrapvalidator] (http://bootstrapvalidator.votintsev.ru/getting-started).
