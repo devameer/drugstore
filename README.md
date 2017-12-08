@@ -24,3 +24,5 @@
   * [Bootstrap](http://getbootstrap.com/).
   * [Animsition](http://mynameismatthieu.com/WOW/). 
   * [Bootstrapvalidator](http://bootstrapvalidator.votintsev.ru/getting-started).
+  * [Nice Scroll](https://nicescroll.areaaperta.com/).
+  * [Bootstrap Modal](https://getbootstrap.com/docs/4.0/components/modal).
